@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 1.25rem;
+}
+
+body {
+  min-height: 100svh;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  width: min(100% - 1.25rem, 75rem);
+  margin-inline: auto;
+  margin-block: 2.5rem;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.text-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.625rem;
+}
+.text-content .title {
+  color: hsl(0, 0%, 59%);
+  font-size: clamp(1.25rem, 5vw, 2.5rem);
+  font-weight: 300;
+}
+.text-content .title span {
+  color: hsl(209, 33%, 12%);
+  font-weight: 700;
+}
+.text-content .subscribe {
+  color: hsl(209, 33%, 12%);
+  font-size: clamp(0.6875rem, 2vw, 1rem);
+  font-weight: 300;
+}
+
+.email-form {
+  width: min(100%, 37.5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.625rem;
+}
+@media (min-width: 768px) {
+  .email-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.25rem;
+  }
+}
+.email-form .email,
+.email-form .btn-submit {
+  width: 100%;
+  padding: 0.9375rem 1.25rem;
+  border-radius: 3.125rem;
+}
+.email-form .email {
+  border: 0.0625rem solid hsl(0, 0%, 59%);
+  caret-color: hsl(223, 87%, 63%);
+}
+.email-form .email.email-error {
+  position: relative;
+  caret-color: hsl(354, 100%, 66%);
+  border: 0.125rem solid hsl(354, 100%, 66%);
+}
+.email-form .email.email-error::placeholder {
+  color: hsl(209, 33%, 12%);
+}
+@media (min-width: 768px) {
+  .email-form .email {
+    flex: 3;
+  }
+}
+.email-form .email::placeholder {
+  color: hsl(0, 0%, 59%);
+}
+.email-form .msg-error {
+  display: none;
+  color: hsl(354, 100%, 66%);
+  font-size: 0.625rem;
+  font-weight: 300;
+  font-style: italic;
+  margin-top: -0.3125rem;
+  margin-bottom: 0.625rem;
+}
+@media (min-width: 768px) {
+  .email-form .msg-error {
+    align-self: start;
+    margin-inline-start: 1.5625rem;
+  }
+}
+.email-form .btn-submit {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(223, 87%, 63%);
+  box-shadow: 0 0.125rem 0.25rem 0.0625rem color-mix(in srgb, hsl(209, 33%, 12%) 30%, transparent);
+}
+@media (min-width: 768px) {
+  .email-form .btn-submit {
+    flex: 1;
+  }
+}
+.email-form .btn-submit {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.dashboard {
+  margin-top: 2.5rem;
+  margin-bottom: 5rem;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.25rem;
+}
+.social li {
+  border: 0.0625rem solid hsl(0, 0%, 59%);
+  border-radius: 50%;
+  padding: 0.3125rem;
+}
+.social li a {
+  font-size: clamp(0.625rem, 4vw, 0.9375rem);
+  font-weight: 700;
+  color: hsl(223, 87%, 63%);
+}
+.social li:hover {
+  border-color: hsl(223, 87%, 63%);
+  background-color: hsl(223, 87%, 63%);
+}
+.social li:hover a {
+  color: hsl(0, 0%, 100%);
+}
+
+.footer {
+  margin-top: 0.625rem;
+  color: hsl(0, 0%, 59%);
+  text-align: center;
+  font-size: clamp(0.625rem, 4vw, 1.25rem);
+  font-weight: 300;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,21 @@
+@use "abstract" as *;
+//! Colors
+$primary: hsl(223, 87%, 63%);
+$light-blue: hsl(223, 100%, 88%);
+$dark-blue: hsl(209, 33%, 12%);
+$red: hsl(354, 100%, 66%);
+$gray: hsl(0, 0%, 59%);
+//! Normal Colors
+$white: hsl(0, 0%, 100%);
+//! Box Shadow 
+$shadow: 0 rem(2) rem(4) rem(1) color-mix(in srgb, $dark-blue 30%, transparent);
+//! Fonts
+$font-size: 20;
+$font-family: "Libre Franklin", sans-serif;
+
+//! layout
+$mobile: "min-width: 375px";
+$tablet: "min-width: 768px";
+$desktop: "min-width: 1440px";
+
+

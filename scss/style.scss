@@ -1,0 +1,148 @@
+@use "variables" as *;
+@use "abstract" as *;
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+html {
+  font-size: rem($font-size);
+}
+body {
+  min-height: 100svh;
+  font-family: $font-family;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+.container {
+  width: min(calc(100% - rem(20)), rem(1200));
+  margin-inline: auto;
+  margin-block: rem(40);
+  padding: rem(20);
+  @include flex-center(column, rem(20));
+}
+.text-content {
+  text-align: center;
+  @include flex-center(column, rem(10));
+  .title {
+    color: $gray;
+    font: {
+      size: clamp(rem($font-size), 5vw, rem(40));
+      weight: 300;
+    }
+    span {
+      color: $dark-blue;
+      font-weight: 700;
+    }
+  }
+  .subscribe {
+    color: $dark-blue;
+    font: {
+      size: clamp(rem(11), 2vw, rem(16));
+      weight: 300;
+    }
+  }
+}
+.email-form {
+  width: min(100%, rem(600));
+  @include flex-center(column, rem(10));
+  @media (#{$tablet}) {
+    @include flex-center(row, rem(20));
+  }
+  .email,
+  .btn-submit {
+    width: 100%;
+    padding: rem(15) rem(20);
+    border-radius: rem(50);
+  }
+  .email {
+    border: rem(1) solid $gray;
+    caret-color: $primary;
+    &.email-error {
+      position: relative;
+      caret-color: $red;
+      border: rem(2) solid $red;
+      &::placeholder {
+        color: $dark-blue;
+      }
+    }
+    @media (#{$tablet}) {
+      flex: 3;
+    }
+    &::placeholder {
+      color: $gray;
+    }
+  }
+  .msg-error {
+    display: none;
+    color: $red;
+    font: {
+      size: rem(10);
+      weight: 300;
+      style:italic;
+    }
+    margin-top: rem(-5);
+    margin-bottom: rem(10);
+    @media (#{$tablet}) {      
+      align-self: start;
+      margin-inline-start: rem(25);
+    }
+  }
+  .btn-submit {
+    color: $white;
+    background-color: $primary;
+    box-shadow: $shadow;
+    @media (#{$tablet}) {
+      flex: 1;
+    }
+    font: {
+      weight: 600;
+    }
+    cursor: pointer;
+  }
+}
+.dashboard {
+  margin-top: rem(40);
+  margin-bottom: rem(80);
+}
+.social {
+  @include flex-center(row, rem(20));
+
+  li {
+    border: rem(1) solid $gray;
+    border-radius: 50%;
+    padding: rem(5);
+    a {
+      font: {
+        size: clamp(rem($font-size * 0.5), 4vw, rem($font-size * 0.75));
+        weight: 700;
+      }
+      color: $primary;
+    }
+    &:hover {
+      border-color: $primary;
+      background-color: $primary;
+      a {
+        color: $white;
+      }
+    }
+  }
+}
+.footer {
+  margin-top: rem(10);
+  color: $gray;
+  text-align: center;
+  font: {
+    size: clamp(rem($font-size * 0.5), 4vw, rem($font-size));
+    weight: 300;
+  }
+}
+
+
+// On Submit 
