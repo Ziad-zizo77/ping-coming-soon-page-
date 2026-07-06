@@ -127,6 +127,7 @@ img {
 }
 
 .dashboard {
+  width: clamp(100% - 2.5rem, 30vw, 37.5rem);
   margin-top: 2.5rem;
   margin-bottom: 5rem;
 }
